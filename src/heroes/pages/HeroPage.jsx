@@ -8,6 +8,7 @@ export const HeroPage = () => {
   const {id} = useParams();
 
   const hero = useMemo(() => getHeroById(id), [id] );
+  const heroImageUrl = `./assets/heroes/${id}.jpg`;
 
   const handleNavigateBack = () => {
     navigate(-1);
@@ -21,7 +22,7 @@ export const HeroPage = () => {
     <div className="row mt-3">
       <div className="col-4">
         <img
-          src={`/heroes/${id}.jpg`}
+          src={heroImageUrl}
           alt={hero.superhero}
           className="img-thumbnail animate__animated animate__fadeInLeft"
         />

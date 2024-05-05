@@ -8,7 +8,7 @@ export const HeroPage = () => {
   const {id} = useParams();
 
   const hero = useMemo(() => getHeroById(id), [id] );
-  const heroImageUrl = `./assets/heroes/${id}.jpg`;
+  const heroImageUrl = `https://askr3d.github.io/heroes-app/assets/heroes/${id}.jpg`;
 
   const handleNavigateBack = () => {
     navigate(-1);
